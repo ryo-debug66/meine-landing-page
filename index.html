@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Morgenrot</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__rating">
+        <span class="topbar__rating-label">Wie gefällt dir unsere Website?</span>
+        <div class="topbar__stars" id="topbarStars" role="group" aria-label="Website bewerten">
+          <button class="star" data-value="1" aria-label="1 Stern">&#9733;</button>
+          <button class="star" data-value="2" aria-label="2 Sterne">&#9733;</button>
+          <button class="star" data-value="3" aria-label="3 Sterne">&#9733;</button>
+          <button class="star" data-value="4" aria-label="4 Sterne">&#9733;</button>
+          <button class="star" data-value="5" aria-label="5 Sterne">&#9733;</button>
+        </div>
+        <span class="topbar__rating-thanks" id="ratingThanks"></span>
+      </div>
+      <a class="topbar__google" href="https://www.google.com/search?q=Café+Morgenrot+Berlin" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#FBC02D"/>
+          <path d="M3.15295 7.3455L6.43845 9.755C7.32745 7.554 9.48045 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.15895 2 4.82795 4.1685 3.15295 7.3455Z" fill="#E53935"/>
+          <path d="M12 22C14.583 22 16.93 21.0115 18.7045 19.404L15.6095 16.785C14.5718 17.5742 13.3037 18.001 12 18C9.39903 18 7.19053 16.3415 6.35853 14.027L3.09753 16.5395C4.75253 19.778 8.11353 22 12 22Z" fill="#4CAF50"/>
+          <path d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#1565C0"/>
+        </svg>
+        Google-Bewertung schreiben
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">Café <span>Morgenrot</span></div>
+    <ul class="nav__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menü</a></li>
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Willkommen im</p>
+      <h1 class="hero__title">Café Morgenrot</h1>
+      <p class="hero__sub">Handgefertigter Kaffee · Frische Backwaren · Herzliche Atmosphäre</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Menü entdecken</a>
+        <a href="#contact" class="btn btn--ghost">Tisch reservieren</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="features__grid">
+        <div class="feature">
+          <div class="feature__icon">&#9749;</div>
+          <h3>Specialty Coffee</h3>
+          <p>Sorgfältig ausgewählte Bohnen aus aller Welt, von Hand geröstet.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">&#127855;</div>
+          <h3>Frisch gebacken</h3>
+          <p>Croissants, Kuchen und Brote – täglich frisch aus unserer Küche.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">&#127807;</div>
+          <h3>Regional & Bio</h3>
+          <p>Wir beziehen unsere Zutaten von lokalen Bauernhöfen der Region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Unsere Karte</p>
+        <h2 class="section-header__title">Was darf es sein?</h2>
+      </div>
+
+      <div class="menu__tabs">
+        <button class="menu__tab active" data-tab="drinks">Getränke</button>
+        <button class="menu__tab" data-tab="food">Speisen</button>
+        <button class="menu__tab" data-tab="sweets">Süßes</button>
+      </div>
+
+      <div class="menu__panel active" id="tab-drinks">
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Espresso</h4>
+              <p>Kräftig, dunkel, intensiv</p>
+            </div>
+            <span class="menu-item__price">2,80 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Cappuccino</h4>
+              <p>Mit samtigem Milchschaum</p>
+            </div>
+            <span class="menu-item__price">3,60 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Flat White</h4>
+              <p>Doppelter Ristretto, wenig Milch</p>
+            </div>
+            <span class="menu-item__price">3,90 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Matcha Latte</h4>
+              <p>Japanischer Zeremonien-Matcha</p>
+            </div>
+            <span class="menu-item__price">4,50 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Cold Brew</h4>
+              <p>12h kaltgebrüht, sanft &amp; mild</p>
+            </div>
+            <span class="menu-item__price">4,20 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Heiße Schokolade</h4>
+              <p>Belgische Kuvertüre, 70%</p>
+            </div>
+            <span class="menu-item__price">3,80 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="tab-food">
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Avocado Toast</h4>
+              <p>Sauerteig, Feta, Chiliflocken</p>
+            </div>
+            <span class="menu-item__price">8,50 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Eggs Benedict</h4>
+              <p>Pochierte Eier, Hollandaise</p>
+            </div>
+            <span class="menu-item__price">10,50 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Granola Bowl</h4>
+              <p>Griechischer Joghurt, Beeren</p>
+            </div>
+            <span class="menu-item__price">7,90 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Quiche Lorraine</h4>
+              <p>Hausgemacht, täglich frisch</p>
+            </div>
+            <span class="menu-item__price">6,80 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="tab-sweets">
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Croissant</h4>
+              <p>Buttrig, knusprig, frisch</p>
+            </div>
+            <span class="menu-item__price">2,50 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Zitronentarte</h4>
+              <p>Hausgemachte Lemon Curd</p>
+            </div>
+            <span class="menu-item__price">4,20 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Tiramisu</h4>
+              <p>Original nach Nonna's Rezept</p>
+            </div>
+            <span class="menu-item__price">5,50 €</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__info">
+              <h4>Cinnamon Roll</h4>
+              <p>Mit Frischkäse-Glasur</p>
+            </div>
+            <span class="menu-item__price">3,80 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container about__container">
+      <div class="about__visual">
+        <div class="about__img-wrap">
+          <div class="about__img-placeholder">
+            <div class="about__coffee-art">
+              <div class="cup">
+                <div class="cup__steam"></div>
+                <div class="cup__steam cup__steam--2"></div>
+                <div class="cup__steam cup__steam--3"></div>
+                <div class="cup__body">
+                  <div class="cup__liquid"></div>
+                </div>
+                <div class="cup__saucer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="section-header__eyebrow">Unsere Geschichte</p>
+        <h2>Mehr als nur ein Kaffee</h2>
+        <p>Seit 2015 ist das Café Morgenrot ein Ort der Begegnung im Herzen der Stadt. Was als kleines Projektzimmer mit einer einzigen Siebträgermaschine begann, ist heute eine Institution geworden.</p>
+        <p>Wir glauben, dass guter Kaffee Zeit braucht – Zeit zum Reifen, Zeit zum Brühen und Zeit, ihn in Ruhe zu genießen.</p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">10+</span>
+            <span class="stat__label">Jahre Erfahrung</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">12</span>
+            <span class="stat__label">Kaffeesorten</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">200+</span>
+            <span class="stat__label">Gäste täglich</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Was unsere Gäste sagen</p>
+        <h2 class="section-header__title">Stimmen</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial">
+          <p>"Der beste Cappuccino der Stadt. Ich komme jeden Morgen hierher – es ist mein kleines Ritual geworden."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">S</div>
+            <div>
+              <strong>Sophie K.</strong>
+              <span>Stammgast seit 2018</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"Die Atmosphäre ist einfach wunderbar. Man sitzt, liest, arbeitet – und die Zeit vergeht wie im Flug."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">M</div>
+            <div>
+              <strong>Marcus T.</strong>
+              <span>Freischaffender Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"Das Frühstück hier ist unschlagbar. Die Croissants schmecken wie frisch aus Paris importiert."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">L</div>
+            <div>
+              <strong>Lena B.</strong>
+              <span>Food Bloggerin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Hours -->
+  <section class="contact" id="contact">
+    <div class="container contact__container">
+      <div class="contact__info">
+        <p class="section-header__eyebrow">Besucht uns</p>
+        <h2>Wir freuen uns auf euch</h2>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <span class="contact__icon">&#128205;</span>
+            <div>
+              <strong>Adresse</strong>
+              <p>Musterstraße 12<br />10115 Berlin</p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__icon">&#128336;</span>
+            <div>
+              <strong>Öffnungszeiten</strong>
+              <p>Mo – Fr: 07:30 – 20:00<br />Sa – So: 08:00 – 21:00</p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__icon">&#128222;</span>
+            <div>
+              <strong>Kontakt</strong>
+              <p>+49 30 1234567<br />hallo@cafemorgenrot.de</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form-wrap">
+        <form class="contact__form" id="reservationForm">
+          <h3>Tisch reservieren</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Dein Name" required />
+            </div>
+            <div class="form__group">
+              <label for="guests">Personen</label>
+              <select id="guests">
+                <option>1 Person</option>
+                <option selected>2 Personen</option>
+                <option>3–4 Personen</option>
+                <option>5+ Personen</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="date">Datum</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form__group">
+              <label for="time">Uhrzeit</label>
+              <input type="time" id="time" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message">Wünsche & Anmerkungen</label>
+            <textarea id="message" rows="3" placeholder="Geburtstag, Allergien, ..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Reservierung anfragen</button>
+        </form>
+        <div class="contact__success" id="formSuccess">
+          <div class="success__icon">&#10003;</div>
+          <h3>Anfrage erhalten!</h3>
+          <p>Wir melden uns innerhalb von 24h bei dir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Café <span>Morgenrot</span></div>
+      <p class="footer__copy">&copy; 2026 Café Morgenrot · Mit Liebe gemacht</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram">&#9679;</a>
+        <a href="#" aria-label="Facebook">&#9679;</a>
+        <a href="#" aria-label="TikTok">&#9679;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
